@@ -1,0 +1,62 @@
+package com.novice.studyhelper.aty;
+
+import android.app.ActionBar;
+import android.app.ActionBar.LayoutParams;
+import android.app.Activity;
+import android.app.SearchManager;
+import android.content.Context;
+import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.SearchView;
+
+import com.novice.studyhelper.R;
+
+public class AtySearch extends Activity {
+
+	private SearchView searchView;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.ck);
+		ActionBar actionBar = getActionBar();
+		actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE
+				| ActionBar.DISPLAY_HOME_AS_UP | ActionBar.DISPLAY_SHOW_CUSTOM);
+		setTitle(" ");
+		LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		View customActionBarView = inflater.inflate(R.layout.ck, null);
+
+		searchView = (SearchView) customActionBarView
+				.findViewById(R.id.ck_search);
+		searchView.setIconified(false);
+		LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT,
+				LayoutParams.WRAP_CONTENT, Gravity.CENTER_VERTICAL
+						| Gravity.RIGHT);
+		actionBar.setCustomView(customActionBarView, params);
+		// show keyboard
+		getWindow().setSoftInputMode(
+				WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE
+						| WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
+	}
+
+	// public boolean onCreateOptionsMenu(Menu menu) {
+	// MenuInflater inflater = getMenuInflater();
+	// inflater.inflate(R.menu.search_menu, menu);
+	//
+	// // Associate searchable configuration with the SearchView
+	// SearchManager searchManager =
+	// (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+	// SearchView searchView =
+	// (SearchView) menu.findItem(R.id.search).getActionView();
+	// searchView.setSearchableInfo(
+	// searchManager.getSearchableInfo(getComponentName()));
+	//
+	// return true;
+	// }
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">学习助手</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+	<string name="studyaid">学习助手</string>
+    <string name="function2">我的课程表</string>
+    <string name="function1">我要蹭课</string>
+    <string name="function3">推荐课程</string>
+    <string name="function4">及时提醒</string>
+    <string name="function5">课堂笔记</string>
+    <string name="function6">疑惑解答</string>
+    <string name="coursedetail">课程详情</string>
+    <string name="lookcourse">查看我的课程表</string>
+    <string name="addsearchplan">添加到我的蹭课计划</string>
+    <string name="ck_string">请输入您要蹭的课程</string>
+    <string name="makeplan">制定我的蹭课计划</string>
+    <string name="ok">确定</string>
+    <string name="bt_search">搜索</string>
+    <string name="copyright">Copyright ©</string>
+</resources>
