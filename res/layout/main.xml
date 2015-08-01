@@ -7,48 +7,41 @@
     android:orientation="vertical"
     tools:context="com.study.aid.MainActivity" >
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginBottom="15dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_weight="1"
-        android:background="@drawable/blur"
-        android:orientation="horizontal" >
+        android:background="@drawable/blur" >
+
+        <!-- 此处是注册用户首页id -->
 
         <ImageView
             android:id="@+id/user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
             android:layout_gravity="center"
-            android:layout_weight="1"
+            android:contentDescription="@string/user"
             android:src="@drawable/user" />
 
-        <TextView
-            android:id="@+id/app_info"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="4"
-            android:gravity="center|left"
-            android:text="@string/studyaid"
-            android:textColor="@color/white" />
+        <!-- app详情id -->
 
         <ImageView
-            android:id="@+id/setting1"
+            android:id="@+id/app_details"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/About_us"
+            android:src="@drawable/about_us" />
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:src="@drawable/settings" />
-    </LinearLayout>
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/user"
+            android:text="@string/studyaid"
+            android:textColor="@color/white" />
+    </RelativeLayout>
 
-    
- 
-    
-    
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -56,202 +49,106 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="10dp"
-        android:layout_weight="20"
         android:orientation="vertical" >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
+            android:baselineAligned="false"
             android:orientation="horizontal" >
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:orientation="vertical" >
-
-                <ImageView
-                    android:id="@+id/search"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginTop="5dp"
-                    android:src="@drawable/search" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/function2"
-                    android:textColor="@color/white" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:orientation="vertical" >
-
-                <ImageView
-                    android:id="@+id/course"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginTop="5dp"
-                    android:src="@drawable/course" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/function1"
-                    android:textColor="@color/white" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="2dp"
-                android:layout_weight="1"
-                android:orientation="vertical" >
-
-                <ImageView
-                    android:id="@+id/intro"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginTop="5dp"
-                    android:src="@drawable/share" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/function3"
-                    android:textColor="@color/white" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="5dp"
-            android:layout_weight="1"
-            android:orientation="vertical" >
-
-            <ImageView
-                android:id="@+id/reminder"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="5dp"
-                android:src="@drawable/reminder" />
-
             <TextView
+                android:id="@+id/search_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
-                android:text="@string/function4"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/search"
+                android:gravity="center"
+                android:text="@string/function1"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/course_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/course"
+                android:gravity="center"
+                android:text="@string/function2"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/share_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/share"
+                android:gravity="center"
+                android:text="@string/function3"
                 android:textColor="@color/white" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:orientation="horizontal" >
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="2dp"
-                android:layout_marginRight="25dp"
-                android:layout_weight="1"
-                android:orientation="vertical" >
-
-                <ImageView
-                    android:id="@+id/note"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/note" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/function5"
-                    android:textColor="@color/white" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="2dp"
-                android:layout_weight="1"
-                android:orientation="vertical" >
-
-                <ImageView
-                    android:id="@+id/help"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/help" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/function6"
-                    android:textColor="@color/white" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/reminder_layout"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="1dp"
-            android:layout_weight="1" >
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:drawableTop="@drawable/reminder"
+            android:text="@string/function4"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal" >
 
             <TextView
-                android:id="@+id/text1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:id="@+id/note_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/note"
                 android:gravity="center"
-                android:text="@string/copyright" />
+                android:text="@string/function5"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/help_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/help"
+                android:gravity="center"
+                android:text="@string/function6"
+                android:textColor="@color/white" />
         </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="1dp"
+        android:layout_weight="1" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/copyright" />
     </LinearLayout>
 
 </LinearLayout>
